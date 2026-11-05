@@ -8,6 +8,7 @@ Cada tarjeta enlaza a la versión Live del proyecto y a su repositorio.
 | GBoy-JS | https://gboy-js.web.app/ | [gemuboy-js](https://github.com/gabom88/gemuboy-js) |
 | Mario & Luigi | https://gabom88.github.io/mario-luigi-js/ | [mario-luigi-js](https://github.com/gabom88/mario-luigi-js) |
 | Digger JS | https://gabom88.github.io/digger-js/ | [digger-js](https://github.com/gabom88/digger-js) |
+| Pac-Maze DFS | https://gabom88.github.io/Pac-Maze-DFS/ | [Pac-Maze-DFS](https://github.com/gabom88/Pac-Maze-DFS) |
 | Paint 98 | https://gabom88.github.io/Paint-98/ | [Paint-98](https://github.com/gabom88/Paint-98) |
 | かな Kana | https://gabom88.github.io/hiragana/ | [hiragana](https://github.com/gabom88/hiragana) |
 
