@@ -197,9 +197,11 @@ main {
   margin: var(--b);
   transition: transform .12s steps(2);
 }
-.cart:hover,
-.cart:focus-within {
-  transform: translate(-4px, -4px);
+@media (hover: hover) and (pointer: fine) {
+  .cart:hover,
+  .cart:focus-within {
+    transform: translate(-4px, -4px);
+  }
 }
 
 .cart-label {
@@ -220,6 +222,7 @@ main {
   position: relative;
   margin: 16px 16px 0;
   aspect-ratio: 16 / 10;
+  height: auto;
   background: var(--black);
   overflow: hidden;
   box-shadow:
@@ -227,8 +230,11 @@ main {
     0 0 0 calc(var(--b) * 2) #3d356e;
 }
 .screen img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  max-width: none;
   display: block;
   object-fit: cover;
   image-rendering: pixelated;
@@ -243,8 +249,10 @@ main {
   pointer-events: none;
   background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, .14) 2px 3px);
 }
-.screen:hover img,
-.screen:focus-visible img { transform: scale(1.04); }
+@media (hover: hover) and (pointer: fine) {
+  .screen:hover img,
+  .screen:focus-visible img { transform: scale(1.04); }
+}
 
 .cart-body {
   display: flex;
@@ -314,7 +322,7 @@ main {
   background: #5a5185;
   color: var(--ink);
 }
-.btn:hover { filter: brightness(1.12); }
+@media (hover: hover) { .btn:hover { filter: brightness(1.12); } }
 .btn:active {
   transform: translateY(var(--b));
   box-shadow:
@@ -341,6 +349,10 @@ main {
   font-family: "Press Start 2P", monospace;
   font-size: 9px;
   color: #6f66a3;
+}
+
+@supports not (aspect-ratio: 1) {
+  .screen { height: 0; padding-top: 62.5%; }
 }
 
 @media (max-width: 480px) {

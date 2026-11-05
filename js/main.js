@@ -41,11 +41,20 @@
 
   resize();
   draw();
-  window.addEventListener('resize', () => { resize(); if (reduce) draw(); });
+  // En el móvil, ocultar la barra de direcciones cambia solo el alto: se ignora
+  let lastW = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth === lastW) return;
+    lastW = window.innerWidth;
+    resize();
+    if (reduce) draw();
+  });
 })();
 
 // Muestra el GIF animado al pasar el ratón (solo se carga cuando hace falta)
-document.querySelectorAll('.screen[data-anim]').forEach((screen) => {
+// Solo en equipos con ratón: en el móvil, el scroll táctil disparaba el hover
+const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+if (canHover) document.querySelectorAll('.screen[data-anim]').forEach((screen) => {
   const img = screen.querySelector('img');
   const still = img.src;
   const anim = screen.dataset.anim;
