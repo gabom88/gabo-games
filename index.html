@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gabo Games</title>
+  <meta name="description" content="Catálogo de juegos y apps retro hechos en JavaScript por gabom88: GBoy-JS, Mario & Luigi, Digger JS, Paint 98 y Kana.">
+  <meta name="theme-color" content="#0b0820">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23ffcc00' d='M2 0h4v1h1v1h1v4H7v1H6v1H2V7H1V6H0V2h1V1h1z'/%3E%3Cpath fill='%23ff7a00' d='M3 2h2v4H3z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <p class="hud"><span>1UP</span> <span id="score">000000</span> <span class="hi">HI-SCORE 999999</span></p>
+    <h1 class="logo" aria-label="Gabo Games">
+      <span class="logo-top">GABO</span>
+      <span class="logo-bottom">GAMES</span>
+    </h1>
+    <p class="tagline">Juegos y apps retro hechos en JavaScript.<br>Elige un cartucho y dale a <b>JUGAR</b>.</p>
+    <p class="insert-coin">▶ INSERT COIN ◀</p>
+  </header>
+
+  <main>
+    <h2 class="section-title"><span>SELECT GAME</span></h2>
+
+    <ul class="grid" id="catalog">
+      <!-- GBoy-JS -->
+      <li class="cart" style="--accent:#8bac0f;--accent-dark:#306230">
+        <div class="cart-label">
+          <span class="cart-no">01</span>
+          <span class="cart-tag">EMULADOR</span>
+        </div>
+        <a class="screen" href="https://gboy-js.web.app/" target="_blank" rel="noopener">
+          <img src="https://raw.githubusercontent.com/gabom88/gemuboy-js/master/docs/screenshots/skins.png" alt="Tres aspectos de GBoy-JS: Berry, Atomic Purple y Teal" loading="lazy" style="object-position:top">
+        </a>
+        <div class="cart-body">
+          <h3>GBoy-JS</h3>
+          <p>Emulador de Game Boy y Game Boy Color para el móvil, en el navegador. Se instala como app, funciona sin conexión y trae 24 juegos homebrew gratis.</p>
+          <ul class="chips"><li>GB / GBC</li><li>PWA</li><li>Táctil</li></ul>
+          <div class="actions">
+            <a class="btn btn-play" href="https://gboy-js.web.app/" target="_blank" rel="noopener">▶ JUGAR</a>
+            <a class="btn btn-repo" href="https://github.com/gabom88/gemuboy-js" target="_blank" rel="noopener">REPO</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Mario & Luigi -->
+      <li class="cart" style="--accent:#e52521;--accent-dark:#7a0f0d">
+        <div class="cart-label">
+          <span class="cart-no">02</span>
+          <span class="cart-tag">PLATAFORMAS</span>
+        </div>
+        <a class="screen" href="https://gabom88.github.io/mario-luigi-js/" target="_blank" rel="noopener" data-anim="https://raw.githubusercontent.com/gabom88/mario-luigi-js/main/docs/screenshots/versus.gif">
+          <img src="https://raw.githubusercontent.com/gabom88/mario-luigi-js/main/docs/screenshots/level1.png" alt="Mario saltando junto a una tubería en el nivel 1" loading="lazy">
+        </a>
+        <div class="cart-body">
+          <h3>Mario &amp; Luigi</h3>
+          <p>Port al navegador del plataformas que Mike Wiering programó en 1994 en Turbo Pascal. Seis niveles, modo 2 jugadores, editor de niveles y controles táctiles.</p>
+          <ul class="chips"><li>1994</li><li>2P Versus</li><li>Editor</li></ul>
+          <div class="actions">
+            <a class="btn btn-play" href="https://gabom88.github.io/mario-luigi-js/" target="_blank" rel="noopener">▶ JUGAR</a>
+            <a class="btn btn-repo" href="https://github.com/gabom88/mario-luigi-js" target="_blank" rel="noopener">REPO</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Digger JS -->
+      <li class="cart" style="--accent:#2ee86b;--accent-dark:#0e6b2c">
+        <div class="cart-label">
+          <span class="cart-no">03</span>
+          <span class="cart-tag">ARCADE</span>
+        </div>
+        <a class="screen" href="https://gabom88.github.io/digger-js/" target="_blank" rel="noopener" data-anim="https://raw.githubusercontent.com/gabom88/digger-js/main/docs/screenshots/versus.gif">
+          <img src="https://raw.githubusercontent.com/gabom88/digger-js/main/docs/screenshots/versus-juego.png" alt="Dos Digger excavando túneles entre esmeraldas y bolsas de oro" loading="lazy">
+        </a>
+        <div class="cart-body">
+          <h3>Digger JS</h3>
+          <p>El clásico de PC de 1983, ahora en el navegador. Excava túneles, recoge esmeraldas y oro, y esquiva a los Nobbins. Con modo para dos jugadores.</p>
+          <ul class="chips"><li>1983</li><li>2P Versus</li><li>Offline</li></ul>
+          <div class="actions">
+            <a class="btn btn-play" href="https://gabom88.github.io/digger-js/" target="_blank" rel="noopener">▶ JUGAR</a>
+            <a class="btn btn-repo" href="https://github.com/gabom88/digger-js" target="_blank" rel="noopener">REPO</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Paint 98 -->
+      <li class="cart" style="--accent:#3a6ea5;--accent-dark:#000080">
+        <div class="cart-label">
+          <span class="cart-no">04</span>
+          <span class="cart-tag">DIBUJO</span>
+        </div>
+        <a class="screen" href="https://gabom88.github.io/Paint-98/" target="_blank" rel="noopener">
+          <img src="https://raw.githubusercontent.com/gabom88/Paint-98/main/docs/preview.png" alt="Paint 98 con su logo de pinceles abierto en el lienzo" loading="lazy" style="object-position:top">
+        </a>
+        <div class="cart-body">
+          <h3>Paint 98</h3>
+          <p>Programa de dibujo con el estilo de un escritorio de 1998. 16 herramientas, paleta de colores, zoom y guardado en PNG. Pensado para el celular en vertical.</p>
+          <ul class="chips"><li>16 herramientas</li><li>PNG</li><li>PWA</li></ul>
+          <div class="actions">
+            <a class="btn btn-play" href="https://gabom88.github.io/Paint-98/" target="_blank" rel="noopener">▶ ABRIR</a>
+            <a class="btn btn-repo" href="https://github.com/gabom88/Paint-98" target="_blank" rel="noopener">REPO</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Hiragana -->
+      <li class="cart" style="--accent:#ff5fa2;--accent-dark:#8a1d52">
+        <div class="cart-label">
+          <span class="cart-no">05</span>
+          <span class="cart-tag">ESTUDIO</span>
+        </div>
+        <a class="screen screen-light" href="https://gabom88.github.io/hiragana/" target="_blank" rel="noopener">
+          <img src="img/hiragana.png" alt="Flashcard de Kana: un carácter y sus opciones de lectura" loading="lazy" style="object-position:top">
+        </a>
+        <div class="cart-body">
+          <h3>かな Kana</h3>
+          <p>Flashcards para aprender hiragana y katakana. Modos Estudio, Time attack y Survival, orden de trazos y vocabulario. Todo en un solo archivo HTML.</p>
+          <ul class="chips"><li>208 kana</li><li>3 modos</li><li>Offline</li></ul>
+          <div class="actions">
+            <a class="btn btn-play" href="https://gabom88.github.io/hiragana/" target="_blank" rel="noopener">▶ JUGAR</a>
+            <a class="btn btn-repo" href="https://github.com/gabom88/hiragana" target="_blank" rel="noopener">REPO</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho por <a href="https://github.com/gabom88" target="_blank" rel="noopener">@gabom88</a></p>
+    <p class="small">PRESS START · © <span id="year">2026</span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
